@@ -1,0 +1,908 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>NSGROUP キッズチアリーディング＆体育スクール</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&family=Nunito:wght@400;600;700;800;900&display=swap">
+
+<style>
+  /* ============================================
+     NSGROUP LP — チアリーディング＆キッズ体育
+     Layout: fullwidth hero → features → info
+     ============================================ */
+
+  :root {
+    /* Color tokens */
+    --bg: #fff8f5;
+    --surface: #ffffff;
+    --surface2: #fff1eb;
+    --fg: #2a1a10;
+    --fg-muted: #6b4c38;
+    --border: #f0d8cc;
+    --accent: #e8480a;
+    --accent-soft: #ff7a48;
+    --accent-pale: #fff0eb;
+    --gold: #f59e0b;
+    --blue: #3b82f6;
+    --green: #22c55e;
+    --pink: #ec4899;
+    --purple: #8b5cf6;
+
+    /* Type tokens */
+    --font-display: 'Nunito', 'Zen Maru Gothic', sans-serif;
+    --font-body: 'Zen Maru Gothic', 'Nunito', sans-serif;
+
+    color-scheme: light;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1a0f08;
+      --surface: #261508;
+      --surface2: #321a0d;
+      --fg: #fdf0e8;
+      --fg-muted: #c49a7e;
+      --border: #4a2a18;
+      --accent: #ff6633;
+      --accent-soft: #ff8c66;
+      --accent-pale: #2a1208;
+      --gold: #fbbf24;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1a0f08;
+    --surface: #261508;
+    --surface2: #321a0d;
+    --fg: #fdf0e8;
+    --fg-muted: #c49a7e;
+    --border: #4a2a18;
+    --accent: #ff6633;
+    --accent-soft: #ff8c66;
+    --accent-pale: #2a1208;
+    --gold: #fbbf24;
+    color-scheme: dark;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body);
+    line-height: 1.7;
+    overflow-x: hidden;
+    padding-left: max(0px, env(safe-area-inset-left, 0px));
+    padding-right: max(0px, env(safe-area-inset-right, 0px));
+  }
+
+  img { max-width: 100%; display: block; }
+
+  /* ---- HEADER ---- */
+  .site-header {
+    background: var(--surface);
+    border-bottom: 2px solid var(--border);
+    padding-block: 12px;
+  }
+  .header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .header-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--fg);
+  }
+  .logo-badge {
+    background: var(--accent);
+    color: #fff;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 1.4rem;
+    letter-spacing: 0.04em;
+    padding: 6px 14px;
+    border-radius: 50px;
+    line-height: 1;
+  }
+  .logo-sub {
+    font-size: 0.72rem;
+    color: var(--fg-muted);
+    line-height: 1.3;
+    font-weight: 700;
+  }
+  .header-contact a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--accent);
+    color: #fff;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 0.85rem;
+    padding: 8px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    white-space: nowrap;
+  }
+  .header-contact a:hover { background: var(--accent-soft); transform: scale(1.04); }
+
+  /* ---- HERO IMAGE ---- */
+  .hero-img-wrap {
+    width: 100%;
+    max-height: 520px;
+    overflow: hidden;
+    position: relative;
+  }
+  .hero-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+
+  /* ---- HERO SECTION ---- */
+  .hero-section {
+    background: linear-gradient(135deg, var(--accent) 0%, #ff6b35 50%, #ffb347 100%);
+    padding-block: 48px 56px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-section::before {
+    content: "🌟";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    font-size: 120px;
+    opacity: 0.06;
+    pointer-events: none;
+  }
+  .hero-section::after {
+    content: "✨";
+    position: absolute;
+    bottom: -20px;
+    right: -10px;
+    font-size: 140px;
+    opacity: 0.06;
+    pointer-events: none;
+  }
+  .hero-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.25);
+    color: #fff;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    padding: 6px 16px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    border: 1.5px solid rgba(255,255,255,0.4);
+  }
+  .hero-title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(2rem, 6vw, 3.4rem);
+    color: #fff;
+    line-height: 1.2;
+    text-wrap: balance;
+    margin-bottom: 18px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  }
+  .hero-title em {
+    font-style: normal;
+    background: rgba(255,255,255,0.25);
+    border-radius: 8px;
+    padding: 0 6px;
+  }
+  .hero-desc {
+    color: rgba(255,255,255,0.92);
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin-bottom: 32px;
+    text-wrap: balance;
+  }
+  .hero-cta-group {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    background: #fff;
+    color: var(--accent);
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.2); }
+  .btn-outline {
+    background: transparent;
+    color: #fff;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1rem;
+    padding: 13px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    border: 2px solid rgba(255,255,255,0.7);
+    transition: background 0.2s, transform 0.15s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn-outline:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); }
+
+  /* ---- SECTION WRAPPER ---- */
+  .section {
+    padding-block: 64px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-alt { background: var(--surface2); }
+  .section-white { background: var(--surface); }
+
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--accent);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    color: var(--fg);
+    text-wrap: balance;
+    margin-bottom: 12px;
+    line-height: 1.25;
+  }
+  .section-lead {
+    color: var(--fg-muted);
+    font-size: 1rem;
+    max-width: 560px;
+  }
+
+  /* ---- RIBBON BANNER ---- */
+  .ribbon {
+    background: var(--accent);
+    padding-block: 16px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    overflow: hidden;
+    position: relative;
+  }
+  .ribbon-inner {
+    display: flex;
+    gap: 48px;
+    white-space: nowrap;
+    animation: ribbonScroll 18s linear infinite;
+  }
+  .ribbon-item {
+    color: #fff;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+  .ribbon-dot { opacity: 0.5; }
+  @keyframes ribbonScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* ---- FEATURE CARDS ---- */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+  }
+  .feature-card {
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: 20px;
+    padding: 28px 24px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--card-accent, var(--accent));
+    border-radius: 20px 20px 0 0;
+  }
+  .feature-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(232,72,10,0.12); }
+  .feature-icon {
+    font-size: 2.4rem;
+    margin-bottom: 14px;
+    line-height: 1;
+  }
+  .feature-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--fg);
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  .feature-desc {
+    font-size: 0.9rem;
+    color: var(--fg-muted);
+    line-height: 1.7;
+  }
+
+  /* ---- COMING SOON BANNER ---- */
+  .coming-soon-banner {
+    background: var(--surface);
+    border: 2px dashed var(--border);
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .coming-badge {
+    background: var(--gold);
+    color: #fff;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    padding: 4px 12px;
+    border-radius: 50px;
+    white-space: nowrap;
+  }
+  .coming-text {
+    font-size: 0.92rem;
+    color: var(--fg-muted);
+    min-width: 0;
+  }
+
+  /* ---- INSTRUCTOR ---- */
+  .instructor-wrap {
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: 24px;
+    padding: 36px;
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  .instructor-icon-wrap {
+    flex-shrink: 0;
+    width: 96px;
+    height: 96px;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.8rem;
+  }
+  .instructor-body { flex: 1; min-width: 0; }
+  .instructor-name {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--fg);
+    margin-bottom: 4px;
+  }
+  .instructor-role {
+    font-size: 0.8rem;
+    color: var(--accent);
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .instructor-desc {
+    font-size: 0.95rem;
+    color: var(--fg-muted);
+    line-height: 1.8;
+  }
+  .instructor-badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+  }
+  .badge {
+    background: var(--accent-pale);
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 50px;
+    border: 1.5px solid var(--border);
+  }
+
+  /* ---- MAP & ACCESS ---- */
+  .map-wrap {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid var(--border);
+    margin-top: 32px;
+    aspect-ratio: 16/9;
+    max-height: 400px;
+  }
+  .map-wrap iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .map-btn-wrap {
+    text-align: center;
+    margin-top: 16px;
+  }
+  .btn-map {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent);
+    color: #fff;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 0.9rem;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    box-shadow: 0 4px 16px rgba(232,72,10,0.25);
+  }
+  .btn-map:hover { background: var(--accent-soft); transform: translateY(-2px); }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 32px;
+  }
+  .info-card {
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    padding: 20px 22px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .info-icon { font-size: 1.6rem; flex-shrink: 0; line-height: 1; margin-top: 2px; }
+  .info-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .info-value {
+    font-size: 0.95rem;
+    color: var(--fg);
+    font-weight: 600;
+    line-height: 1.5;
+    word-break: break-all;
+  }
+  .info-value a { color: var(--accent); text-decoration: none; }
+  .info-value a:hover { text-decoration: underline; }
+
+  /* ---- CTA SECTION ---- */
+  .cta-section {
+    background: linear-gradient(135deg, var(--accent) 0%, #ff6b35 60%, #ffb347 100%);
+    padding-block: 72px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-inner { max-width: 640px; margin: 0 auto; position: relative; z-index: 1; }
+  .cta-title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    color: #fff;
+    text-wrap: balance;
+    margin-bottom: 16px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  }
+  .cta-sub {
+    color: rgba(255,255,255,0.88);
+    font-size: 1rem;
+    margin-bottom: 32px;
+    font-weight: 500;
+  }
+  .cta-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 16px;
+    padding: 16px 28px;
+    margin-bottom: 24px;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 1.7rem;
+    letter-spacing: 0.04em;
+    line-height: 1;
+  }
+  .cta-phone-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; opacity: 0.8; text-transform: uppercase; }
+
+  /* ---- FOOTER ---- */
+  .site-footer {
+    background: #1a0c05;
+    color: rgba(255,255,255,0.7);
+    padding-block: 40px 32px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .footer-logo-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .footer-logo-badge {
+    background: var(--accent);
+    color: #fff;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 1.2rem;
+    padding: 5px 14px;
+    border-radius: 50px;
+  }
+  .footer-logo-name {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.4;
+  }
+  .footer-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  .footer-links a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: #fff; }
+  .footer-sns {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    align-items: center;
+  }
+  .sns-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.15s, opacity 0.15s;
+    text-decoration: none;
+  }
+  .sns-icon:hover { transform: scale(1.1); opacity: 0.9; }
+  .sns-icon svg { width: 22px; height: 22px; }
+  .sns-instagram { background: none; }
+  .footer-address {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.7;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    margin-top: 4px;
+  }
+  .footer-copy {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.35);
+    margin-top: 12px;
+  }
+
+  /* ---- DECORATIVE ELEMENTS ---- */
+  .confetti-strip {
+    display: flex;
+    gap: 0;
+    height: 6px;
+    overflow: hidden;
+  }
+  .confetti-strip span {
+    flex: 1;
+    height: 100%;
+  }
+
+  /* ---- RESPONSIVE ---- */
+  @media (max-width: 600px) {
+    .hero-section { padding-block: 36px 44px; }
+    .hero-title { font-size: 1.9rem; }
+    .instructor-wrap { padding: 24px 18px; }
+    .instructor-icon-wrap { width: 72px; height: 72px; font-size: 2rem; }
+    .instructor-name { font-size: 1.25rem; }
+    .cta-phone { font-size: 1.4rem; padding: 14px 22px; }
+    .section { padding-block: 48px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ribbon-inner { animation: none; }
+    .feature-card, .btn-primary, .btn-outline, .btn-map, .sns-icon { transition: none; }
+  }
+</style>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#" class="header-logo">
+      <span class="logo-badge">NSGROUP</span>
+      <span class="logo-sub">キッズチアリーディング<br>＆キッズ体育スクール</span>
+    </a>
+    <div class="header-contact">
+      <a href="tel:08021282723">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.12 6.12l.98-.98a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        無料体験はこちら
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO IMAGE ============ -->
+<div class="hero-img-wrap">
+  <img src="images/hero.png" alt="NSGROUPの子どもたちが元気いっぱいにチアやアクロバットに取り組む様子" loading="eager">
+</div>
+
+<!-- ============ HERO SECTION ============ -->
+<section class="hero-section">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      🎀 静岡県富士宮市のキッズスクール
+    </div>
+    <h1 class="hero-title">
+      チアとアクロバットで<br><em>自信と笑顔</em>を育てよう！
+    </h1>
+    <p class="hero-desc">
+      バク転・タンブリングから器械体操まで。<br>
+      保育士経験のある講師が、お子さんの「やりたい！」を全力でサポートします。
+    </p>
+    <div class="hero-cta-group">
+      <a href="tel:08021282723" class="btn-primary">
+        🎉 無料体験に申し込む
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ RIBBON ============ -->
+<div class="ribbon">
+  <div class="ribbon-inner" aria-hidden="true">
+    <span class="ribbon-item">🎀 キッズチアリーディング <span class="ribbon-dot">✦</span></span>
+    <span class="ribbon-item">🤸 タンブリング・バク転 <span class="ribbon-dot">✦</span></span>
+    <span class="ribbon-item">🏅 キッズ体育スクール <span class="ribbon-dot">✦</span></span>
+    <span class="ribbon-item">👩‍🏫 保育士資格のある講師 <span class="ribbon-dot">✦</span></span>
+    <span class="ribbon-item">🌟 仲間と一緒に成長 <span class="ribbon-dot">✦</span></span>
+    <span class="ribbon-item">🎀 キッズチアリーディング <span class="ribbon-dot">✦</span></span>
+    <span class="ribbon-item">🤸 タンブリング・バク転 <span class="ribbon-dot">✦</span></span>
+    <span class="ribbon-item">🏅 キッズ体育スクール <span class="ribbon-dot">✦</span></span>
+    <span class="ribbon-item">👩‍🏫 保育士資格のある講師 <span class="ribbon-dot">✦</span></span>
+    <span class="ribbon-item">🌟 仲間と一緒に成長 <span class="ribbon-dot">✦</span></span>
+  </div>
+</div>
+
+<!-- ============ FEATURES ============ -->
+<section class="section section-white">
+  <div class="section-inner">
+    <div class="section-label">✨ NSGROUPが選ばれる理由</div>
+    <h2 class="section-title">お子さんの可能性を広げる<br>4つの特長</h2>
+    <p class="section-lead">競技を通じた心身の成長と、安心して通える環境づくりを大切にしています。</p>
+
+    <div class="features-grid">
+      <div class="feature-card" style="--card-accent: #e8480a;">
+        <div class="feature-icon">🤸</div>
+        <div class="feature-title">専門的なタンブリング・アクロバット指導</div>
+        <div class="feature-desc">チアの基礎だけでなく、バク転などのタンブリングや、男女混合ならではのダイナミックな技を段階的に学べます。初心者のお子さんでも無理なくステップアップできます。</div>
+      </div>
+      <div class="feature-card" style="--card-accent: #ec4899;">
+        <div class="feature-icon">👩‍🏫</div>
+        <div class="feature-title">保育士経験のある講師による指導</div>
+        <div class="feature-desc">指導者のNATSUMI先生は保育士としての経験があり、お子さんの気持ちに寄り添った指導が得意。小さなお子さんでも安心して通わせることができます。</div>
+      </div>
+      <div class="feature-card" style="--card-accent: #8b5cf6;">
+        <div class="feature-icon">🏃</div>
+        <div class="feature-title">「NSキッズ体育スクール」の併設</div>
+        <div class="feature-desc">跳び箱・マット・鉄棒などの器具を使用し、バルーンやレクリエーションを交えた「楽しい運動遊び」を通じて、運動神経の向上を目指せます。</div>
+      </div>
+      <div class="feature-card" style="--card-accent: #22c55e;">
+        <div class="feature-icon">🌟</div>
+        <div class="feature-title">仲間と成長できる環境</div>
+        <div class="feature-desc">学校以外の友達と切磋琢磨し、成功も失敗も分かち合いながら「自信」と「可能性」を広げる指導方針。チームワークと精神力が自然に育まれます。</div>
+      </div>
+    </div>
+
+    <div class="coming-soon-banner">
+      <span class="coming-badge">COMING SOON</span>
+      <span class="coming-text">🏋️ スポーツ専門員による「成長期の栄養・体づくりアドバイス」を準備中！お楽しみに。</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSTRUCTOR ============ -->
+<section class="section section-alt">
+  <div class="section-inner">
+    <div class="section-label">👩‍🏫 講師紹介</div>
+    <h2 class="section-title">安心して任せられる<br>指導者について</h2>
+
+    <div class="instructor-wrap">
+      <div class="instructor-icon-wrap">👩‍🏫</div>
+      <div class="instructor-body">
+        <div class="instructor-name">NATSUMI 先生</div>
+        <div class="instructor-role">チーフインストラクター</div>
+        <p class="instructor-desc">
+          保育士としての豊富な経験を活かし、子どもたちの発達段階に合わせた丁寧な指導を心がけています。チアリーディングとアクロバットの技術指導だけでなく、お子さんが「また来たい！」と思えるような楽しい雰囲気づくりにも力を入れています。競技を通じて、仲間と壁を乗りこえる精神力や、自己肯定感を育てることを大切にしています。
+        </p>
+        <div class="instructor-badges">
+          <span class="badge">保育士資格あり</span>
+          <span class="badge">チアリーディング指導</span>
+          <span class="badge">アクロバット指導</span>
+          <span class="badge">キッズ体育指導</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACCESS / MAP ============ -->
+<section class="section section-alt">
+  <div class="section-inner">
+    <div class="section-label">📍 アクセス</div>
+    <h2 class="section-title">静岡県富士宮市で<br>お待ちしています</h2>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-icon">📍</div>
+        <div>
+          <div class="info-label">住所</div>
+          <div class="info-value">〒418-0022<br>静岡県富士宮市小泉1649-20</div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">📞</div>
+        <div>
+          <div class="info-label">電話番号</div>
+          <div class="info-value">080-2128-2723</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="map-wrap">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3259.3675670108905!2d138.6332358!3d35.222218999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601bd3888f1c1f3b%3A0xbfc00c133e6e44d4!2zTlNHUk9VUCjjgq3jg4Pjgrrjg4HjgqLjg6rjg7zjg4fjgqPjg7PjgrDvvIbjgq3jg4PjgrrkvZPogrLjgrnjgq_jg7zjg6sp!5e0!3m2!1sja!2sjp!4v1792129448831!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="NSGROUPの地図"></iframe>
+    </div>
+    <div class="map-btn-wrap">
+      <a href="https://www.google.com/maps/place/NSGROUP(%E3%82%AD%E3%83%83%E3%82%BA%E3%83%81%E3%82%A2%E3%83%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%EF%BC%86%E3%82%AD%E3%83%83%E3%82%BA%E4%BD%93%E8%82%B2%E3%82%B9%E3%82%AF%E3%83%BC%E3%83%AB)/@35.222219,138.6332358,17z/data=!3m1!4b1!4m6!3m5!1s0x601bd3888f1c1f3b:0xbfc00c133e6e44d4!8m2!3d35.222219!4d138.6332358!16s%2Fg%2F11jsgcs98g?authuser=0&entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="btn-map">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Googleマップで見る
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <h2 class="cta-title">まずは無料体験から！<br>お気軽にお問い合わせください</h2>
+    <p class="cta-sub">体験レッスンでNSGROUPの雰囲気を感じてみてください。</p>
+    <div>
+      <div style="margin-bottom:8px;">
+        <span style="color:rgba(255,255,255,0.7);font-size:0.82rem;font-weight:700;letter-spacing:0.1em;">📞 お電話でのお問い合わせ</span>
+      </div>
+      <div class="cta-phone">
+        080-2128-2723
+      </div>
+    </div>
+    <a href="tel:08021282723" class="btn-primary" style="margin-top:4px;">
+      📞 今すぐ電話する
+    </a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-logo-row">
+      <span class="footer-logo-badge">NSGROUP</span>
+      <span class="footer-logo-name">キッズチアリーディング＆キッズ体育スクール<br>静岡県富士宮市</span>
+    </div>
+
+    <div class="footer-sns">
+      <a href="https://www.instagram.com/nsgroup723/" target="_blank" rel="noopener" class="sns-icon sns-instagram" aria-label="Instagram" style="width:38px;height:38px;border-radius:10px;overflow:hidden;display:flex;align-items:center;justify-content:center;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="38" height="38">
+          <defs>
+            <radialGradient id="ig-rg" cx="30%" cy="107%" r="150%">
+              <stop offset="0%" stop-color="#ffd676"/>
+              <stop offset="25%" stop-color="#f46f30"/>
+              <stop offset="52%" stop-color="#dc2a6a"/>
+              <stop offset="74%" stop-color="#9e219c"/>
+              <stop offset="100%" stop-color="#4f5bd5"/>
+            </radialGradient>
+          </defs>
+          <rect width="24" height="24" rx="5.5" fill="url(#ig-rg)"/>
+          <rect x="6.5" y="6.5" width="11" height="11" rx="3" fill="none" stroke="white" stroke-width="1.5"/>
+          <circle cx="12" cy="12" r="2.8" fill="none" stroke="white" stroke-width="1.5"/>
+          <circle cx="17" cy="7" r="1" fill="white"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="footer-links">
+      <a href="https://www.instagram.com/nsgroup723/" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        公式サイト（Instagram）
+      </a>
+    </div>
+
+    <div class="footer-address">
+      〒418-0022 静岡県富士宮市小泉1649-20<br>
+      TEL: 080-2128-2723
+    </div>
+    <div class="footer-copy">© NSGROUP All rights reserved.</div>
+  </div>
+</footer>
+
+</body></html>
